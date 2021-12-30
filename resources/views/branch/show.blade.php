@@ -2,6 +2,6 @@
 
 @section('content')
 
-<livewire:login.register />
+<livewire:branch.show />
 
 @endsection

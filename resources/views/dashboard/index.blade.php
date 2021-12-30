@@ -2,6 +2,6 @@
 
 @section('content')
 
-<livewire:dashboard />
+<livewire:dashboard.index />
 
 @endsection

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Branch;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\Gym;
 
-class Branch extends Component
+class Create extends Component
 {
     use WithFileUploads;
 
@@ -14,7 +14,7 @@ class Branch extends Component
 
     public function render()
     {
-        return view('livewire.branch');
+        return view('livewire.branch.create');
     }
 
     public function store()

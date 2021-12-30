@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Login;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
-class Login extends Component
+class Index extends Component
 {
     public $email, $password;
 
     public function render()
     {
-        return view('livewire.login');
+        return view('livewire.login.index');
     }
 
     public function login()

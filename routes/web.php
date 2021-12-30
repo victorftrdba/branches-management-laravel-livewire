@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\BranchController;
 Route::middleware('auth')->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/nova-filial', [BranchController::class, 'create'])->name('branch.create');
+    Route::get('/ver-filial/{id}', [BranchController::class, 'show'])->name('branch.show');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

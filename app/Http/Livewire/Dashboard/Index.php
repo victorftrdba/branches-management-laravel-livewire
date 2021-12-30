@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Dashboard;
 
 use Livewire\Component;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Gym;
 
-class Dashboard extends Component
+class Index extends Component
 {
     public function render()
     {
         $gyms = Gym::orderBy('created_at', 'desc')->paginate(15);
 
-        return view('livewire.dashboard', [
+        return view('livewire.dashboard.index', [
             'gyms' => $gyms,
         ]);
     }
