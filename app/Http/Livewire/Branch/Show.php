@@ -10,7 +10,7 @@ class Show extends Component
 {
     public function render(Request $request)
     {
-        $id = $request->route()->parameters['id'];
+        $id = $request->id;
 
         $gym = Gym::findOrFail($id);
 

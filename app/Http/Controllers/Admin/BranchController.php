@@ -17,4 +17,9 @@ class BranchController extends Controller
     {
         return view('branch.show');
     }
+
+    public function edit($id)
+    {
+        return view('branch.edit');
+    }
 }

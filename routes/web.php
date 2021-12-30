@@ -21,7 +21,8 @@ Route::middleware('auth')->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/nova-filial', [BranchController::class, 'create'])->name('branch.create');
     Route::get('/ver-filial/{id}', [BranchController::class, 'show'])->name('branch.show');
+    Route::get('/editar-filial/{id}', [BranchController::class, 'edit'])->name('branch.edit');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::get('/registrar', [RegisterController::class, 'index'])->name('register');
+Route::get('/registrar', [LoginController::class, 'register'])->name('register');

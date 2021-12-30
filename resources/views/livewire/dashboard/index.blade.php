@@ -4,7 +4,7 @@
 
             <div class="col-12 mb-5">
                 <div class="border py-2 ps-2 mb-4 rounded text-center fw-bold">
-                    Gerenciamento de Filiais
+                    Gerenciamento de Filiais | Seja bem-vindo, {{ Auth::user()->name }}.
                 </div>
                 <a href="{{ route('branch.create') }}" class="btn btn-primary rounded-0 fw-bold border-0">Registrar nova filial <i class="fas fa-plus"></i></a>
                 <button class="btn btn-danger fw-bold rounded-0 border-0" wire:click="logout">Fazer logout <i class="fas fa-sign-out-alt"></i></button>
@@ -22,6 +22,7 @@
                         <p class="card-text mb-2"><span class="fw-bold">Estado</span>: {{ $gym->state }}</p>
                         <p class="card-text"><span class="fw-bold">Telefone</span>: {{ $gym->phone }}</p>
                         <a href="{{ route('branch.show', $gym->id) }}" class="btn btn-primary fw-bold border-0 rounded-0">Ver filial <i class="fas fa-eye"></i></a>
+                        <a href="{{ route('branch.edit', $gym->id) }}" class="btn btn-danger fw-bold border-0 rounded-0">Editar filial <i class="fas fa-pen"></i></a>
                     </div>
                 </div>
         </div>
