@@ -2,6 +2,8 @@
 
 @section('content')
 
-<livewire:branch.edit />
+@livewire('branch.edit', [
+    'gym' => $gym,
+])
 
 @endsection

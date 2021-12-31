@@ -20,6 +20,8 @@ class BranchController extends Controller
 
     public function edit($id)
     {
-        return view('branch.edit');
+        $gym = Gym::findOrFail($id);
+
+        return view('branch.edit', compact('gym'));
     }
 }

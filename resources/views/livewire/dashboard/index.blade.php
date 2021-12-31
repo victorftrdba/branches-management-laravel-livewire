@@ -23,6 +23,7 @@
                         <p class="card-text"><span class="fw-bold">Telefone</span>: {{ $gym->phone }}</p>
                         <a href="{{ route('branch.show', $gym->id) }}" class="btn btn-primary fw-bold border-0 rounded-0">Ver filial <i class="fas fa-eye"></i></a>
                         <a href="{{ route('branch.edit', $gym->id) }}" class="btn btn-danger fw-bold border-0 rounded-0">Editar filial <i class="fas fa-pen"></i></a>
+                        <button class="btn btn-danger fw-bold border-0 rounded-0" wire:click="delete({{ $gym->id }})">Excluir filial</button>
                     </div>
                 </div>
         </div>

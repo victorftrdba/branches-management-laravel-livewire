@@ -5,10 +5,11 @@ namespace App\Http\Livewire\Branch;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\Gym;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Create extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, LivewireAlert;
 
     public $image, $name, $cnpj, $state, $address, $phone, $employees;
 
@@ -38,6 +39,12 @@ class Create extends Component
             'phone' => $this->phone,
             'employees' => $this->employees,
         ]);
+
+        $this->alert('success', 'Filial atualizada com sucesso!', [
+            'position' => 'center',
+        ]);
+
+        sleep(5);
 
         return redirect('/');
     }
