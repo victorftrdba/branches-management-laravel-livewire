@@ -3,19 +3,13 @@
 namespace App\Http\Livewire\Branch;
 
 use Livewire\Component;
-use Illuminate\Http\Request;
-use App\Models\Gym;
 
 class Show extends Component
 {
-    public function render(Request $request)
+    public $gym;
+
+    public function render()
     {
-        $id = $request->id;
-
-        $gym = Gym::findOrFail($id);
-
-        return view('livewire.branch.show', [
-            'gym' => $gym,
-        ]);
+        return view('livewire.branch.show');
     }
 }

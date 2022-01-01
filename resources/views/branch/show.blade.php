@@ -2,6 +2,8 @@
 
 @section('content')
 
-@livewire('branch.show')
+@livewire('branch.show', [
+    'gym' => $gym,
+])
 
 @endsection

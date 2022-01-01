@@ -4,7 +4,6 @@ namespace App\Http\Livewire\Branch;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use Illuminate\Http\Request;
 use App\Models\Gym;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
@@ -14,7 +13,7 @@ class Edit extends Component
 
     public $gym, $image, $name, $cnpj, $state, $address, $phone, $employees;
 
-    public function render(Request $request)
+    public function render()
     {
         return view('livewire.branch.edit');
     }
