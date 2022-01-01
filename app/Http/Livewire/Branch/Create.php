@@ -40,12 +40,10 @@ class Create extends Component
             'employees' => $this->employees,
         ]);
 
-        $this->alert('success', 'Filial atualizada com sucesso!', [
+        $this->alert('success', 'Filial criada com sucesso!', [
             'position' => 'center',
         ]);
 
-        sleep(5);
-
-        return redirect('/');
+        return redirect()->to('/');
     }
 }

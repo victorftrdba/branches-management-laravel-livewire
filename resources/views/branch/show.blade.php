@@ -2,6 +2,6 @@
 
 @section('content')
 
-<livewire:branch.show />
+@livewire('branch.show')
 
 @endsection

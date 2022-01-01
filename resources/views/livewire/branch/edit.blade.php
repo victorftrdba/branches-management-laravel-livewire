@@ -3,10 +3,10 @@
         <div class="container mt-5 mb-5">
             <div class="row justify-content-center">
                 <div class="col-12 mb-5">
-                    <div class="border py-2 ps-2 mb-4 rounded text-center fw-bold">
+                    <div class="border py-2 ps-2 mb-4 rounded text-center fw-bold text-uppercase">
                         Edição de Filial {{ $gym->id }}
                     </div>
-                    <a href="{{ route('dashboard') }}" class="btn btn-danger fw-bold rounded-0 border-0">Voltar <i
+                    <a href="{{ route('dashboard') }}" class="btn btn-danger fw-bold rounded-0 border-0 text-uppercase">Voltar <i
                             class="fas fa-undo-alt"></i></a>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                     <label class="fw-bold mb-2" for="image">Imagem</label>
                     <input type="file" class="form-control" wire:model="image" />
                     <div class="text-center mt-5 mb-5">
-                        <img src="{{ asset('storage/'.$gym->image) }}" class="img-fluid">
+                        <img src="{{ asset('storage/'.$gym->image) }}" class="branch-image">
                     </div>
                 </div>
                 <div class="col-6 mb-3">
@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-6 mb-3">
                     <label class="fw-bold mb-2" for="cnpj">CNPJ</label>
-                    <input type="text" placeholder="Digite o CNPJ da filial..." wire:model="cnpj"
+                    <input type="text" id="cnpj" placeholder="Digite o CNPJ da filial..." wire:model="cnpj"
                         class="form-control" />
                 </div>
                 <div class="col-6 mb-3">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-6 mb-3">
                     <label class="fw-bold mb-2" for="phone">Telefone</label>
-                    <input type="text" wire:model="phone" placeholder="Digite o telefone da filial..."
+                    <input type="text" id="phone" wire:model="phone" placeholder="Digite o telefone da filial..."
                         class="form-control" />
                 </div>
                 <div class="col-6 mb-3">
@@ -78,10 +78,27 @@
                 </div>
 
                 <div class="col-3">
-                    <button type="submit" class="btn btn-primary border-0 rounded-0 fw-bold">Atualizar <i
+                    <button type="submit" class="btn btn-primary border-0 rounded-0 fw-bold text-uppercase">Atualizar <i
                             class="fas fa-save"></i></button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/imask"></script>
+<script>
+    var cnpj = document.getElementById('cnpj');
+    var phone = document.getElementById('phone');
+
+    var maskCnpj = {
+        mask: '00.000.000/0000-00'
+    };
+
+    var maskPhone = {
+        mask: '(00) 00000-0000'
+    };
+
+    IMask(cnpj, maskCnpj);
+    IMask(phone, maskPhone);
+</script>

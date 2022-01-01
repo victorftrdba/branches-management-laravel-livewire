@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono&display=swap');
+
+body {
+    font-family: 'Roboto',
+    sans-serif !important;
+}
+
+.bg-management {
+    background-image: url(https://cdn.wallpapersafari.com/98/7/dOBCZa.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.branch-image {
+    width:635px;
+    height:425px;
+    object-fit:cover;
+    object-position:center;
+}
+
+.branch-title {
+    font-size: 3rem;
+}
+
+.branch-info {
+    font-size: 1.3rem;
+}

@@ -38,6 +38,8 @@ class Index extends Component
 
         $gym->delete();
 
-        return $this->alert('success', 'Filial excluída com sucesso!');
+        return $this->alert('success', 'Filial excluída com sucesso!', [
+            'position' => 'center',
+        ]);
     }
 }

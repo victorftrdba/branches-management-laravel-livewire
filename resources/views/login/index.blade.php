@@ -2,6 +2,6 @@
 
 @section('content')
 
-<livewire:login.index />
+@livewire('login.index')
 
 @endsection
